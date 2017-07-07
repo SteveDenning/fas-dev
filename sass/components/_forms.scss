@@ -1,0 +1,171 @@
+label, input, textarea, fieldset {
+	@include borderBox;
+	width: 100%;
+}
+
+
+label {
+	 font-size: 1.6em;
+	 &.input-field {
+		 display: block;
+		 margin-bottom: 10px;
+		 margin-top: 20px;
+	 }
+ }
+input {
+	width: 100%;
+	&.input-field {
+		border: 1px solid transparent;
+		border-bottom: 1px solid $limeGreen;
+		font-size: 1.6em;
+		padding: 10px;
+		outline: 0;
+		&:focus {
+			border-left: 3px solid $limeGreen;
+			outline: 0;
+		}
+	}
+}
+textarea {
+	font-size: 1.6em;
+    font-family: 'Raleway', sans-serif;
+	border: 0;
+	border-bottom: 1px solid $limeGreen;
+	padding: 10px;
+	outline: 0;
+	background: $grey-10;
+	&:focus {
+		border-left: 3px solid $limeGreen;
+		outline: 0;
+	}
+}
+
+// Radio button
+ .radio-buttons {
+	margin: 20px 0;
+ 	label {
+ 		display: block;
+ 		float: none;
+ 		margin-bottom: 5px;
+ 		padding: 0;
+ 		padding-left: 25px;
+ 		width: auto;
+ 		position: relative;
+ 		&:before {
+ 		    border: 1px solid $black;
+ 		    border-radius: 100%;
+ 		    content: "";
+ 		    display: inline-block;
+ 		    height: 15px;
+ 		    margin-right: 10px;
+ 		    width: 15px;
+ 		    position: absolute;
+ 		    top: 0;
+ 		    left: 0;
+ 		}
+ 	}
+ 	input[type="radio"] {
+ 	  left: -999px;
+ 	  position: absolute;
+ 	}
+ 	input[type="radio"]:checked {
+ 	  + label {
+ 	    &:after {
+ 			background: $limeGreen;
+			border: 1px solid $black;
+ 			border-radius: 100%;
+ 			content: "";
+ 			display: inline-block;
+			height: 7px;
+			position: absolute;
+			top: 4px;
+			left: 4px;
+			width: 7px;
+ 			}
+ 		}
+ 	}
+ }
+
+ .ie8 .radio-ruttons {
+ 	input {
+ 		display: inline-block;
+ 		float: left;
+ 	}
+ 	label {
+ 		display: block;
+ 		margin: 0;
+ 		margin-bottom: 10px;
+ 		padding-left: 20px;
+ 		&:before {
+ 		display: none;
+ 		}
+ 	}
+ 	input[type="radio"] {
+ 	  left: 0;
+ 	  position: static;
+ 	  display: inline-block;
+ 	}
+ }
+
+
+// Checkboxes
+.checkbox {
+   margin: 20px 0;
+   label {
+	   display: block;
+	   float: none;
+	   margin-bottom: 5px;
+	   padding: 0;
+	   padding-left: 25px;
+	   width: auto;
+	   position: relative;
+	   span {
+		   border: 1px solid $black;
+		   @include border-radius(2px);
+		   content: "";
+		   display: inline-block;
+		   height: 15px;
+		   margin-right: 10px;
+		   width: 15px;
+		   position: absolute;
+		   top: 0;
+		   left: 0;
+	   }
+   }
+   input[type="checkbox"] {
+	 left: -999px;
+	 position: absolute;
+   }
+   input[type="checkbox"]:checked {
+	 + label {
+	   &:after {
+		   background: $limeGreen;
+		   @include border-radius(1px);
+		   content: "";
+		   display: inline-block;
+		   height: 15px;
+		   position: absolute;
+		   top: 1px;
+		   left: 1px;
+		   width: 15px;
+		   }
+		   span:after {
+			   border: 0;
+			   border-bottom: 2px solid $black;
+			   border-right: 2px solid $black;
+			   content: "";
+			   height: 10px;
+			   position: absolute;
+			   right: 5px;
+			   top: 1px;
+			   transform: rotate(45deg);-moz-transform: rotate(45deg);
+			   -webkit-transform: rotate(45deg);
+			   -o-transform: rotate(45deg);
+			   -ms-transform: rotate(45deg);
+			   transform: rotate(45deg);
+			   width: 3px;
+			   z-index: 10;
+		   }
+	   }
+   }
+}

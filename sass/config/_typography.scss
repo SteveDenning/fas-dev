@@ -1,0 +1,158 @@
+// Headings
+h1, h2, h3, h4, h5 {
+    padding-bottom: 10px;
+    font-weight: normal;
+}
+h1, h2, h3, h4, h5, h6, p, ul, a {
+    padding-left: 8px;
+}
+h1, .h1 {
+    font-size: 2.2em
+}
+h2, .h2 {
+    font-size: 2em
+}
+h3, .h3 {
+    font-size: 1.8em
+}
+h4, .h4 {
+    font-size: 1.6em
+}
+h5, .h5 {
+    font-size: 1.4em
+}
+h6, .h6 {
+    font-size: 1.4em
+}
+p {
+    font-size: 1.4em;
+    padding-bottom: 10px;
+}
+label, input, textarea, legend {
+    font-size: 1.6em;
+}
+@include mQuery($medium) {
+    h1, h2, h3, h4, h5 {
+        padding-bottom: 10px;
+    }
+    h1, .h1 {
+        font-size: 3em
+    }
+    h2, .h2 {
+        font-size: 2.8em
+    }
+    h3, .h3 {
+        font-size: 2.4em
+    }
+    h4, .h4 {
+        font-size: 2.2em
+    }
+    h5, .h5 {
+        font-size: 2em
+    }
+    h6, .h6 {
+        font-size: 1.6em
+    }
+    p {
+        font-size: 1.6em;
+        padding-bottom: 10px;
+    }
+    label, input, textarea, legend {
+        font-size: 1.6em;
+    }
+}
+fieldset {
+    margin: 10px 0;
+}
+// links
+a {
+    // @include transition(background .2s ease);
+    color: $link;
+    font-size: 1em;
+    text-decoration: none;
+    &:hover, &:focus, &:active {
+        text-decoration: underline;
+    }
+}
+p {
+    a {
+        font-size: 100%;
+    }
+}
+li {
+    font-size: 1em;
+    a {
+        font-size: 100%;
+    }
+}
+ol {
+    list-style-position: inside;
+}
+// border-image-source
+img {
+    width: 100%;
+    height: auto;
+}
+::-webkit-input-placeholder {
+    font-size: 1em;
+    font-family: 'Raleway', sans-serif;
+}
+:-moz-placeholder {
+    /* Firefox 18- */
+    font-size: 1em;
+    font-family: 'Raleway', sans-serif;
+}
+::-moz-placeholder {
+    /* Firefox 19+ */
+    font-size: 1em;
+    font-family: 'Raleway', sans-serif;
+}
+:-ms-input-placeholder {
+    font-size: 1em;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+.section-heading {
+    border: {
+        left: 3px solid $limeGreen;
+    }
+    padding: 0 0 0 5px;
+    margin: 30px 0;
+}
+.header-wrapper {
+    margin-top: 0;
+}
+.inner-content {
+    background: $grey-10;
+    padding: 10px 10px 0;
+    &.btm-margin {
+        margin-bottom: 30px;
+    }
+}
+.image-container {
+    padding-bottom: 20px;
+}
+.center-align {
+    text-align: center;
+}
+
+
+
+
+
+// Component title
+h2.index-title, h2.index-heading {
+    font-size: 2em;
+    color: #333;
+    border-bottom: 1px solid red;
+    margin: 20px;
+    @include mQuery($large) {
+        font-size: 3em;
+    }
+}
+h2.index-heading {
+    font-size: 2.5em;
+    padding-left: 0;
+    margin-left: 0;
+}  

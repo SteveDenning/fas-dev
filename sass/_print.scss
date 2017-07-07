@@ -1,0 +1,33 @@
+//
+// @projectDescription: Style sheet used for media="print".
+// @author: Kristina Auckland <kristina.auckland@heathwallace.com>
+// @version: 1.0
+//
+
+// Print Styles
+
+body {
+	background: White;
+	color: Black;
+	font: 12pt "New Century Schoolbook", "Times New Roman", TimesNR, Times, serif;
+	text-align: left;
+}
+
+a {
+	color: Blue;
+	text-decoration: underline;
+}
+a img {
+	border: none;
+}
+img {
+	display: block;
+	margin: 12pt 0;
+}
+
+// TODO:: list classes and ids to remove from printing here
+.exampleClass,
+#exampleID {
+	display: none;
+	visibility: hidden;
+}

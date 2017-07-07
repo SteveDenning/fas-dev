@@ -1,0 +1,43 @@
+.list,
+.link-list,
+.icon-list {
+	list-style: none;
+	li {
+		position: relative;
+		padding-left: 15px;
+		&:before {
+			@include border-radius(50%);
+			background: $limeGreen;
+			content: "";
+			height: 5px;
+			left: 0;
+			top: 8px;
+			position: absolute;
+			width: 5px;
+		}
+	}
+	a {
+		padding-right: 20px;
+		position: relative;
+		text-decoration: none;
+	}
+	.icon-list {
+
+	}
+}
+
+// Custom list styles
+@import "list-component";
+@import "list-demo";
+// @import "list-normalize";
+.custom-links {
+	section {
+		text-align: center;
+		padding: 15px 0;
+	}
+}
+
+
+
+
+

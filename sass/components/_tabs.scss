@@ -1,0 +1,50 @@
+/* Style the tab */
+.tabs-wrapper {
+    position: relative;
+    padding-top: 50px;
+}
+.tab {
+    background-color: $grey-10;
+    border: 1px solid $grey-20;
+    border-bottom: none;
+    display: inline-block;
+    overflow: hidden;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    a {
+        color: $green;
+        display: block;
+        float: left;
+        font-size: 17px;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        @include transition(background-color .3s ease);
+        &:hover {
+            background-color: #ddd;
+        }
+        &:focus, &.active {
+            background-color: #ccc;
+        }
+    }
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

@@ -1,0 +1,146 @@
+footer.page-footer {
+	background: #343434;
+	color: $white;
+	.footer-container {
+		@include borderBox;
+		margin: 0 auto;
+		padding: 20px 10px;
+		.col {
+			margin-bottom: 50px;
+		}
+		@include mQuery($medium) {
+			margin-bottom: 0;
+			padding: 20px;
+			.heading {
+				margin-top: 0;
+			}
+			.col {
+				padding-right: 20px;
+				margin-bottom: 0;
+			}
+		}
+		@include mQuery($desktop) {
+			padding: 20px 0;
+			width: 80%;
+			.col {
+				padding-right: 40px;
+			}
+
+		}
+		.inner {
+			.device {
+				margin-top: 10px;
+			}
+			p {
+				font-size: 1.5em;
+				line-height: 150%;
+				color: $limeGreen;
+				padding-bottom: 0;
+				&.desktop {
+					padding-top: 10px;
+					font-weight: bold;
+					font-size: 1.6em;
+					padding-left:33px;
+				}
+			}
+			a.phone {
+				font-size: 1.6em;
+				font-weight: bold;
+				padding-top: 10px;
+				text-decoration: none;
+			}
+
+		}
+		ul {
+			list-style: none;
+			a {
+				color: #ADADAD;
+				text-decoration: none;
+				font-size: 1.5em;
+				&:hover, &:focus, &:active {
+					color: $white;
+				}
+			}
+		}
+		.heading {
+			font-size: 2.5em;
+			padding-left: 35px;
+			margin-bottom: 20px;
+			&.green {
+				background: url(../images//background/contact.png) no-repeat center left;
+				color: $pastelGreen;
+				li {
+					margin-bottom: 10px;
+				}
+			}
+			&.blue {
+				background: url(../images//background/social.png) no-repeat top left;
+				color: $pastelBlue;
+			}
+			&.white {
+				background: url(../images//background/location.png) no-repeat center left;
+				color: $white;
+			}
+		}
+		.site-links {
+			li {
+				margin-bottom: 10px;
+
+			}
+		}
+		.social-links {
+			li {
+				margin-bottom:13px;
+				background: #2e2e2e;
+				padding: 5px 0;
+				&:hover, &:focus, &:active {
+					cursor: pointer;
+					& a {
+						color: $white;
+					}
+				}
+				a {
+					padding: 0 0 0 35px;
+					display: block;
+					background:  url(../images//background/footer_share_icons.png) top left no-repeat;
+					line-height: 25px;
+				}
+				&.blg {
+					a {
+						background-position: 0 0;
+					}
+					&:hover, &:focus, &:active {
+						background: $blogGreen;
+					}
+				}
+				&.fb {
+					a {
+						background-position: 0 -25px;
+					}
+					&:hover, &:focus, &:active {
+						background: $facebookBlue;
+					}
+				}
+				&.tw {
+					a {
+						background-position: 0 -50px;
+					}
+					&:hover, &:focus, &:active {
+						background: $twitterBlue;
+					}
+				}
+				&.nl {
+					a {
+						background-position: 0 -75px;
+					}
+					&:hover, &:focus, &:active {
+						background: $newsletterOrange;
+					}
+				}
+			}
+		}
+	}
+	.googleMap iframe {
+		width: 100%;
+	}
+}

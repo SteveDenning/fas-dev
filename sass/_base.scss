@@ -1,0 +1,80 @@
+//
+// @projectDescription: Style sheet used for device agnostic layout/page theme/content.
+// @author: Louis Briggs <louis.briggs@heathwallace.com>
+// @version: 1.0
+//
+
+// @Manually add any selectors that need the clearfix to this comma seperated list! Don't use the extend feature anymore as it's not properly supported.
+
+*, *:after, *:before {
+    @include borderBox;
+}
+// Base Styles
+body {
+	font-family: 'Raleway', sans-serif;
+    font-size: 62.5%;  //1em equals 10px
+    position: relative;
+}
+
+// accessibility helpers
+
+// hidden skiplink that only reveals itself when it is being focused on
+.skipLink {
+    background: #222;
+    color: #fff;
+    display: block;
+    left: -9999px;
+    padding: 4px;
+    position: absolute;
+    z-index: 1000;
+    &:focus {
+        left: 0;
+    }
+}
+// hiding from screen and the screen reader
+.hidden {
+    display: none;
+}
+// hiding from screen, but not to the screen reader
+.accessible {
+    position: absolute;
+    left: -9999px;
+}
+// hiding from  devices
+.hideForMobile {
+    display: none;
+    @include mQuery($medium) {
+        display: block;
+    }
+}
+.showForMobile {
+    display: block;
+    @include mQuery($medium) {
+        display: none;
+    }
+}
+.lt-ie9 .hideForTablet {
+    display: block;
+}
+
+.desktop {
+    display: none;
+    @include mQuery($large) {
+        display: block;
+    }
+}
+.mobile {
+    display: block;
+    @include mQuery($large) {
+        display: none;
+    }
+}
+
+
+
+
+
+// REMOVE
+.major-padding {
+    // padding-bottom: 350px;
+}

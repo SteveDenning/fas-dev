@@ -1,0 +1,144 @@
+// variables
+$gridWidth: 100%; // Grid width, if you want responsive then use percent
+$columns: 12; // Total number of columns
+$gutter: 1%; // spacing between column, if responsive use % otherwise causes errors
+$padding: 0; // padding within columns, if responsive use % otherwise causes errors
+
+// Grid variables
+$grid-width: 100%; // Grid width, if you want responsive then use percent
+$columns: 12; // Total number of columns
+
+$gutter-default: 10px;
+$mobile-gutter: 10px;
+$tablet-gutter: 10px;
+$desktop-gutter: 16px;
+
+$gutter-sm: $gutter-default * 1;
+$gutter-md: $gutter-default * 2;
+$gutter-lg: $gutter-default * 3;
+$gutter-xl: $gutter-default * 4;
+
+// Mixin to generate column widths
+@mixin grid-cols($num, $gutter, $columns) {
+	$one-col: $grid-width / $columns;
+	width: $one-col * $num;
+}
+
+.row {
+	@include clearFix;
+	.ie6 &, .ie7 & {
+		zoom:1;
+	}
+}
+.grid__row {
+	@include clearFix;
+	margin-left: -#{$mobile-gutter};
+	margin-right: -#{$mobile-gutter};
+	@include mQuery($small) {
+		margin-left: -#{$tablet-gutter};
+		margin-right: -#{$tablet-gutter};
+	}
+	@include mQuery($large) {
+		margin-left: -#{$desktop-gutter};
+		margin-right: -#{$desktop-gutter};
+	}
+}
+/**
+ *
+ * Grid Columns
+ *
+ */
+@for $i from 1 through $columns {
+	.col-sm-#{$i} {
+		@include grid-cols($i, $mobile-gutter, $columns);
+	}
+}
+
+[class^='col-sm-'],
+[class^='col-md-'],
+[class^='col-lg-'] {
+	display: block;
+	float: left;
+	min-height: 1px;
+	padding: 0 $gutter-default $gutter-default;
+	.reverse-order & {
+		float: right;
+  }
+	&.align-right {
+		text-align: right;
+	}
+	[class^='col-sm-'], [class^='col-md-'], [class^='col-lg-'] {
+		&:last-of-type {
+			padding-bottom: 0;
+		}
+		@include mQuery($large) {
+			padding-bottom: 0;
+		}
+	}
+}
+
+@include mQuery($small) {
+	@for $i from 1 through $columns {
+		.col-md-#{$i} {
+			@include grid-cols($i, $tablet-gutter, $columns);
+		}
+	}
+	[class^='col-sm-'],
+	[class^='col-md-'],
+	[class^='col-lg-'] {
+		padding: 0 $tablet-gutter $tablet-gutter;
+	}
+}
+
+@include mQuery($large) {
+	@for $i from 1 through $columns {
+		.col-lg-#{$i} {
+			@include grid-cols($i, $desktop-gutter, $columns);
+		}
+	}
+	[class^='col-sm-'],
+	[class^='col-md-'],
+	[class^='col-lg-'] {
+		padding: 0 $desktop-gutter $desktop-gutter;
+	}
+}
+
+// Wrappers
+
+.page-wrapper {
+	position: relative;
+}
+
+.page-wrapper, .header-wrapper {
+    @include borderBox;
+	@include clearFix;
+    padding: 10px;
+    margin-top: 30px;
+	padding-left: $mobile-gutter;
+	padding-right: $mobile-gutter;
+	@include mQuery($small) {
+		padding-left: $tablet-gutter;
+		padding-right: $tablet-gutter;
+	}
+	@include mQuery($large) {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-left: $desktop-gutter;
+		padding-right: $desktop-gutter;
+	}
+}
+
+
+
+
+
+
+
+
+
+.exampleGrid {
+	span {
+		font-size: 20px;
+		text-align: center;
+	}
+}

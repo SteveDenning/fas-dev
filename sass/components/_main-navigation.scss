@@ -1,0 +1,184 @@
+$list-spacing: 5px;
+$desktop-gutter: 16px;
+nav.main-nav {
+	@include clearFix;
+	background: $nav;
+	bottom: 0;
+	display: block;
+	position: relative;
+	top: 0;
+	width: 100%;
+	ul {
+		list-style: none;
+	}
+	ul.sub-menu {
+	    display: block;
+	    margin-top: $list-spacing;
+	    margin-left: 20px;
+	}
+	li {
+		padding-bottom: $list-spacing;
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+	a {
+	    color: $nav-link;
+		font-size: 1rem;
+		text-decoration: none;
+	}
+	@include mQuery($large) {
+		display: block;
+		position: relative;
+		z-index: 10;
+		a {
+		    display: block;
+		    line-height:40px;
+			margin: 0;
+		    padding:0 30px;
+		    text-decoration:none;
+			&:hover,
+			&:focus,
+			&:active {
+			    color:$nav-link;
+			    background: none;
+			}
+		}
+		li {
+			padding-bottom: 0;
+		}
+		ul > li {
+			width: 150px;
+		}
+		/* hide sub menu links */
+		ul.sub-menu {
+		    display: none;
+		    margin-left: 0;
+		    text-align: left;
+		    margin-top: 0;
+		}
+		/* show arrows for dropdowns */
+		li.dropdown > a {
+		    position: relative;
+		    padding-bottom: 0;
+		    &:after {
+		    	@include triangle (down, 5px, 7px, $nav-link);
+		    	content: "";
+		    	display: block;
+		    	position: absolute;
+		    	top: 17px;
+		    	right: 5px;
+		    }
+		}
+
+		li li.dropdown > a {
+		    &:after {
+		    	@include triangle (right, 5px, 7px, $nav-link);
+		    	content: "";
+		    	display: block;
+		    	position: absolute;
+		    	top: 17px;
+		    	right: 5px;
+		    }
+		}
+		ul {
+		    list-style-type:none;
+		    margin:0;
+		    padding:0;
+			li {
+			    display:inline-block;
+			    position:relative;
+			    &:hover {
+			    	background: #002b51;
+			    }
+				/* sub nav.desktop-navigation */
+				ul {
+				    background-color: $nav;
+				    position:absolute;
+				    left:0;
+				    top:40px; /* make this equal to the line-height of the links (specified below) */
+				    width: 150px;
+					li {
+					    position:relative;
+					    margin:0;
+					    display:block;
+						/* style sub level links */
+						a {
+						    border-bottom:solid 1px $white;
+						    margin:0 10px;
+						    padding:0;
+						}
+						&:last-child a {
+						    border-bottom:none;
+						}
+
+						ul {
+						    position:absolute;
+						    top:0;
+						    left:200px; /* make this equal to the width of the sub nav.desktop-nav above */
+						    margin:0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.sideMenuContainer {
+	@include borderBox;
+	@include transition(left .8s ease-in-out);
+	background: $nav;
+	left: -110%;
+	margin: 0 auto;
+	min-width: 100px;
+	padding: 10px 10px 10px 10%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 20;
+	&.is-active {
+		left: 0;
+	}
+	@include mQuery($large) {
+		left: 0;
+		padding: 0;
+		margin: 0;
+		position: static;
+
+	}
+	@include mQuery($large) {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-left: $desktop-gutter;
+		padding-right: $desktop-gutter;
+	}
+}
+.mobileButtonOpen {
+	@include transition((left .7s ease, background-position .7s ease));
+	display: block;
+	cursor: pointer;
+	position: absolute;
+	left: 10px;
+	top: -20px;
+	z-index: 21;
+	&:before {
+		// border: 1px solid $black;
+		content: "\f0c9";
+		display: block;
+		font-family: 'FontAwesome';
+		font-size: 2em;
+		height: 30px;
+		width: 30px;
+	}
+	&.is-active {
+		left: 90%;
+		&:before {
+			content: "\f100";
+			color: $white;
+			font-size: 2rem;
+		}
+	}
+	@include mQuery($large) {
+		display: none; 
+	}
+}

@@ -1,0 +1,12 @@
+.body {
+    &.sent-mail-bg {
+        background: url('../images/background/sent-mail.jpg') no-repeat;
+    }
+    &.location {
+        background-image: url('../images/background/map-overlay.jpg');
+        p, .heading {
+            color: $white;
+        }
+    }
+    background-size: cover;
+}

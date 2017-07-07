@@ -1,0 +1,32 @@
+
+// @projectDescription: Combined stylesheet outputted by sass.
+// @author: Louis Briggs <louis.briggs@heathwallace.com>
+// @version: 2.0
+
+ $old-ie: false !default;
+
+@import "config/variables";
+@import "config/mixins";
+@import "config/fonts";
+@import "config/fontIcons/font-icons";
+
+//@import "config/font-icons";
+
+//Base styles
+@media screen, projection {
+  // Compile all the css into one file
+  @import "config/grid";
+	@import "reset";
+	@import "base";
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+//Print
+@media print {
+	@import "print";
+}
+@import "config/typography";
+@import "config/components";

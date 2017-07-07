@@ -1,0 +1,56 @@
+// Media query widths
+// Upddate the widths within the variables below to match the breakpoint of your project
+// These are using a mobile first approach
+
+$xSmall: "min-width: 20em"; // 320px
+$small: "min-width: 30em"; // 480px
+$medium: "min-width: 40em"; // 640px
+$large: "min-width: 48.063em"; // 769px Desktop view
+$xlarge: "min-width: 60em"; // 960px
+$desktop: "min-width: 64em"; // 1024px
+$Ldesktop: "min-width: 80em"; // 1280px
+
+
+// font-style:
+$lato: 'Lato', sans-serif;
+
+
+// Base Colors
+$white: #ffffff;
+$black: #000000;
+$limeGreen: #00FF00;
+$green: green;
+
+//Pastal
+$pastelGreen: #51BC8F;
+$pastelBlue: #3BA4C5;
+$paleGreen: #81d77d;
+
+//Social site colors
+$blogGreen: #4DB086;
+$facebookBlue: #2F4B87;
+$twitterBlue: #3EABCD;
+$newsletterOrange: #CC553D;
+
+// Header
+$header: #10355b;   // Header
+
+// Navigation
+$nav: #3a73a5;  // Top Nav
+$nav-link: $limeGreen;
+
+// Typography
+$link: #596cff;
+$baseFont: #eeeeee;
+$quotes: $green;
+
+//Grey colors
+$grey-70: #222222;
+$grey-60: #444444;
+$grey-50: #666666;
+$grey-40: #888888;
+$grey-30: #aaaaaa;
+$grey-20: #cccccc;
+$grey-10: #eeeeee;
+
+

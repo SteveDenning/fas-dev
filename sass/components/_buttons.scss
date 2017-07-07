@@ -1,0 +1,54 @@
+.btn,
+.secondary {
+	@include transition((background-color .2s ease, box-shadow .2s ease));
+	@include border-radius(2px);
+	@include borderBox();
+	@include boxShadow(0, 3px, 0, 0, #00d90f);
+	background-color: $limeGreen;
+	border: 2px solid $limeGreen;
+	border-bottom: none;
+	color: $black;
+	display: block;
+	font-size: 1.6em;
+	margin: 10px 10px 10px 0;
+	padding: 10px 30px;
+	text-align: center;
+	text-decoration: none;
+	@include mQuery($medium) {
+		display: inline-block;
+		width: auto;
+	}
+	&:hover, &:focus, &:active {
+		@include boxShadow(0, 3px, 0, 0, #000);
+		background-color: $white;
+		text-decoration: none;
+	}
+	&.arrow span {
+		position: relative;
+		&:after {
+			@include triangle (right, 4px, 5px, $black);
+			content: "";
+			display: block;
+			position: absolute;
+			top: 5px;
+			right: -15px;
+		}
+		.ie8 &, .ie9 & {
+			background: url("../images//background/arrow-right.png") no-repeat right 60%;
+			&:after {
+				display: none;
+			}
+		}
+	}
+	&.secondary {
+		background: $white;
+		&:hover, &:focus, &:active {
+			background-color: $limeGreen;
+			text-decoration: none;
+		}
+	}
+	&[class^="icon"]:before,
+	&[class*=" icon"]:before {
+	 	margin-right: 10px;
+	}
+}

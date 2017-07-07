@@ -1,0 +1,78 @@
+// Review / testimonial panel
+.accordion {
+	.accordion-section {
+		// padding: 5px 10px;
+		// border: 1px solid #000;
+		.title {
+			background: $grey-20;
+			font-weight: normal;
+			padding: 10px;
+		}
+	}
+	.accordion-section-title {
+		color: $green;
+		display: block;
+		text-decoration: none;
+		position: relative;
+		&:hover, &:focus, &:active {
+			text-decoration: none;
+		}
+		&:after {
+			font-weight: lighter;
+			content: "\f107";
+			display: block;
+			font-family: 'FontAwesome';
+			font-size: 1.6em;
+			position: absolute;
+			right: 0;
+			top: -5px;
+		}
+		&.active:after {
+			content: "\f106";
+		}
+	}
+	.accordion-section-content {
+		background: $grey-10;
+		border: 1px solid $grey-30;
+		border-top: none;
+		display: none;
+		padding: 10px;
+	}
+	blockquote {
+		.quotes {
+			font-style: italic;
+			font-size: 1.4em;
+			display: inline;
+			padding: 0 10px;
+			position: relative;
+			&:before, &:after {
+				color: $quotes;
+				font-weight: lighter;
+				font-family: 'FontAwesome';
+				font-size: .5em;
+				display: block;
+				position: absolute;
+			}
+			&:before {
+				content: "\f10d";
+				left: 0;
+				top: 0;
+			}
+			&:after {
+				content: "\f10e";
+				bottom: 5px;
+				right: 0;
+			}
+		}
+		.owner {
+			margin-top: 10px;
+			padding-left: 0;
+			span {
+				font-style: italic;
+				&:before {
+					content: " - ";
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,50 @@
+// HW Font Icons (WIP)
+// Inspired by FontAwesome
+// Loads the Icon font, and creates relevant classes for usage
+// For example, using the class 'icon-glass' inside an empty span will generate the glass icon
+
+/*!
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+
+@import 'variables';
+@import 'mixins';
+@import 'path';
+@import 'core';
+@import 'larger';
+@import 'fixed-width';
+@import 'list';
+@import 'bordered-pulled';
+@import 'animated';
+@import 'rotated-flipped';
+@import 'stacked';
+@import 'icons';
+@import 'screen-reader';
+
+
+.hw-icons {
+	li {
+		display: inline-block;
+		margin-bottom: 10px;
+		width: 100%;
+		a {
+			color: #333;
+			font-weight: 200;
+			text-decoration: none;
+		}
+		@include mQuery($medium) {
+			width: 49%;
+		}
+		@include mQuery($large) {
+			width: 33%;
+		}
+	}
+	i {
+		font-size: 30px;
+		span {
+			font-size: .8em;
+			padding-left: 10px;
+		}
+	}
+}

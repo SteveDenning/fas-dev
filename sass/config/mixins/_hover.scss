@@ -1,0 +1,9 @@
+// Name: Hover, Focus, Active
+// Purpose: To apply Hover, Focus, Active
+// How to call: @include hover([Text decoration (none/underline)], [color]);
+
+@mixin hover () {
+	&:hover, &:focus, &:active {
+		background: #000;
+	}
+}

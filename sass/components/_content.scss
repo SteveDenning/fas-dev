@@ -1,0 +1,57 @@
+.inner {
+    @include borderBox;
+    padding: 10px;
+}
+.margin {
+    margin: 20px 0;
+}
+.border {
+     @include borderBox;
+     border: 1px solid $limeGreen;
+}
+
+.email {
+    margin-top: 10px;
+    a {
+        color: $limeGreen;
+        font-size: 1.5em;
+        padding-left: 35px;
+        position: relative;
+        &:before {
+            background: url('../images/background/email.png') no-repeat;
+            content: "";
+            display: inline-block;
+            height: 35px;
+            left: 0;
+            top: -6px;
+            position: absolute;
+            width: 35px;
+        }
+        &:hover, &:focus, &:active {
+            text-decoration: underline;
+        }
+    }
+}
+.sent-mail {
+    padding: 200px 0;
+}
+.mobile {
+    color: $limeGreen;
+}
+p.phone,
+a.phone {
+        color: $limeGreen;
+        font-size: 1.5em;
+        padding-left: 33px;
+        position: relative;
+        &:before {
+            background: url('/images/background/phone.png') no-repeat;
+            content: "";
+            display: inline-block;
+            height: 35px;
+            left: 0;
+            top: 5px;
+            position: absolute;
+            width: 35px;
+    }
+}

@@ -1,0 +1,58 @@
+// variables
+$iconsize: 25px;
+
+.socialIcons {
+	text-align: center;
+	position: relative;
+	.facebook {
+		background: transparent url('/images/background/facebook.png') no-repeat;
+	}
+	.twitter {
+		background: transparent url('/images/background/twitter.png') no-repeat;
+	}
+	.linkedin {
+		background: transparent url('/images/background/linkedin.png') no-repeat;
+	}
+	.icon {
+		@include border-radius(50%);
+		@include transition(background .2s ease);
+		background-size: 105%;
+		background-position: -1px -1px;
+		display: inline-block;
+		margin-right: 10px;
+		height: $iconsize;
+		width: $iconsize;
+		&:hover, &:focus, &:active {
+			background-color: $white;
+		}
+	}
+}
+
+@include mQuery($medium) {
+	.socialIcons {
+		text-align: right;
+	}
+}
+
+// Phone number in header
+.phone-number {
+	display: block;
+	font-size: 2em;
+	padding-right: 10px;
+	&:hover, &:active, &:focus {
+		
+	}
+	span {
+		font-size: 1.4em;
+		margin-right: 5px;
+	}
+	@include mQuery($large) {
+		pointer-events: none;
+	}
+}
+.email {
+	padding-right: 10px;
+}
+.fb-follow.fb_iframe_widget {
+	margin-right: 5px;
+}
