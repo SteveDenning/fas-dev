@@ -16,12 +16,12 @@ input {
 	width: 100%;
 	&.input-field {
 		border: 1px solid transparent;
-		border-bottom: 1px solid $limeGreen;
+		border-bottom: 1px solid $brand;
 		font-size: 1.6em;
 		padding: 10px;
 		outline: 0;
 		&:focus {
-			border-left: 3px solid $limeGreen;
+			border-left: 3px solid $brand;
 			outline: 0;
 		}
 	}
@@ -30,12 +30,12 @@ textarea {
 	font-size: 1.6em;
     font-family: 'Raleway', sans-serif;
 	border: 0;
-	border-bottom: 1px solid $limeGreen;
+	border-bottom: 1px solid $brand;
 	padding: 10px;
 	outline: 0;
 	background: $grey-10;
 	&:focus {
-		border-left: 3px solid $limeGreen;
+		border-left: 3px solid $brand;
 		outline: 0;
 	}
 }
@@ -71,7 +71,7 @@ textarea {
  	input[type="radio"]:checked {
  	  + label {
  	    &:after {
- 			background: $limeGreen;
+ 			background: $brand;
 			border: 1px solid $black;
  			border-radius: 100%;
  			content: "";
@@ -139,7 +139,7 @@ textarea {
    input[type="checkbox"]:checked {
 	 + label {
 	   &:after {
-		   background: $limeGreen;
+		   background: $brand;
 		   @include border-radius(1px);
 		   content: "";
 		   display: inline-block;

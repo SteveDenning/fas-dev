@@ -7,13 +7,13 @@
 }
 .border {
      @include borderBox;
-     border: 1px solid $limeGreen;
+     border: 1px solid $brand;
 }
 
 .email {
     margin-top: 10px;
     a {
-        color: $limeGreen;
+        color: $brand;
         font-size: 1.5em;
         padding-left: 35px;
         position: relative;
@@ -36,11 +36,11 @@
     padding: 200px 0;
 }
 .mobile {
-    color: $limeGreen;
+    color: $brand;
 }
 p.phone,
 a.phone {
-        color: $limeGreen;
+        color: $brand;
         font-size: 1.5em;
         padding-left: 33px;
         position: relative;

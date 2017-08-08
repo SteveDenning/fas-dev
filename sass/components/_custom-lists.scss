@@ -7,7 +7,7 @@
 		padding-left: 15px;
 		&:before {
 			@include border-radius(50%);
-			background: $limeGreen;
+			background: $brand;
 			content: "";
 			height: 5px;
 			left: 0;

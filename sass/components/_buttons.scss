@@ -4,8 +4,8 @@
 	@include border-radius(2px);
 	@include borderBox();
 	@include boxShadow(0, 3px, 0, 0, #00d90f);
-	background-color: $limeGreen;
-	border: 2px solid $limeGreen;
+	background-color: $brand;
+	border: 2px solid $brand;
 	border-bottom: none;
 	color: $black;
 	display: block;
@@ -43,7 +43,7 @@
 	&.secondary {
 		background: $white;
 		&:hover, &:focus, &:active {
-			background-color: $limeGreen;
+			background-color: $brand;
 			text-decoration: none;
 		}
 	}

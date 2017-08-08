@@ -1,5 +1,6 @@
 $list-spacing: 5px;
 $desktop-gutter: 16px;
+
 nav.main-nav {
 	@include clearFix;
 	background: $nav;
@@ -159,11 +160,12 @@ nav.main-nav {
 	cursor: pointer;
 	position: absolute;
 	left: 10px;
-	top: -20px;
+	top: 10px;
 	z-index: 21;
 	&:before {
 		// border: 1px solid $black;
 		content: "\f0c9";
+		color: #ccc;
 		display: block;
 		font-family: 'FontAwesome';
 		font-size: 2em;
@@ -174,8 +176,7 @@ nav.main-nav {
 		left: 90%;
 		&:before {
 			content: "\f100";
-			color: $white;
-			font-size: 2rem;
+			font-size: 3em;
 		}
 	}
 	@include mQuery($large) {
