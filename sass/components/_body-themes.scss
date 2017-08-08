@@ -1,6 +1,7 @@
 .body {
     &.sent-mail-bg {
         background: url('../images/background/sent-mail.jpg') no-repeat;
+        background-size: cover;
     }
     &.location {
         background-image: url('../images/background/map-overlay.jpg');

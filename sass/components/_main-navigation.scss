@@ -27,6 +27,9 @@ nav.main-nav {
 	    color: $nav-link;
 		font-size: 1rem;
 		text-decoration: none;
+		&:hover, &:active, &:focus {
+			color: $grey-30;
+		}
 	}
 	@include mQuery($large) {
 		display: block;
@@ -132,7 +135,7 @@ nav.main-nav {
 	left: -110%;
 	margin: 0 auto;
 	min-width: 100px;
-	padding: 10px 10px 10px 10%;
+	padding: 25px;
 	position: absolute;
 	top: 0;
 	width: 100%;
@@ -159,8 +162,8 @@ nav.main-nav {
 	display: block;
 	cursor: pointer;
 	position: absolute;
-	left: 10px;
-	top: 10px;
+	left: 20px;
+	top: -20px;
 	z-index: 21;
 	&:before {
 		// border: 1px solid $black;
@@ -168,7 +171,7 @@ nav.main-nav {
 		color: #ccc;
 		display: block;
 		font-family: 'FontAwesome';
-		font-size: 2em;
+		font-size: 3em;
 		height: 30px;
 		width: 30px;
 	}
@@ -176,7 +179,7 @@ nav.main-nav {
 		left: 90%;
 		&:before {
 			content: "\f100";
-			font-size: 3em;
+			font-size: 4em;
 		}
 	}
 	@include mQuery($large) {
